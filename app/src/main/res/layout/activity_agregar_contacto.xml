@@ -8,30 +8,30 @@
 
     <TextView
         android:id="@+id/txtTitulo"
-        android:layout_width="363dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="379dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
         android:text="FORMULARIO DE CONTACTO"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtDescripcion"
-        android:layout_width="372dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="392dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="52dp"
         android:text="Este es un formulario de contacto destinado al registro de personas, sus datos personales e intereses"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
     <ScrollView
-        android:layout_width="381dp"
-        android:layout_height="490dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="399dp"
+        android:layout_height="630dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
@@ -48,92 +48,109 @@
                 android:id="@+id/txtNombre"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
-                android:text="Nombre:" />
+                android:text="@string/nombre"
+                android:textColor="#757575" />
 
             <EditText
                 android:id="@+id/etNombre"
-                android:layout_width="363dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Nombre"
-                android:inputType="textPersonName" />
+                android:hint="@string/txt_nombre"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/txtApellido"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:text="Apellido:" />
+                android:text="@string/apellido" />
 
             <EditText
                 android:id="@+id/etApellido"
-                android:layout_width="360dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Apellido"
+                android:hint="@string/txt_apellido"
+                android:hintTextColor="#757575"
                 android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/etTelefono"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Telefono"
-                android:inputType="phone" />
 
             <TextView
                 android:id="@+id/txtTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
-                android:text="Telefono:" />
+                android:text="@string/teléfono" />
+
+            <EditText
+                android:id="@+id/etTelefono"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/txt_teléfono"
+                android:inputType="phone"
+                android:minHeight="48dp" />
+
+            <Spinner
+                android:id="@+id/spinner_tel"
+                android:layout_width="136dp"
+                android:layout_height="48dp" />
 
             <TextView
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:text="Email:" />
+                android:text="@string/email" />
 
             <EditText
                 android:id="@+id/etMail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Mail"
-                android:inputType="textEmailAddress" />
+                android:hint="@string/txt_email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+
+            <Spinner
+                android:id="@+id/spinner_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/txtDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:text="Direccion:" />
+                android:text="@string/dirección" />
 
             <EditText
                 android:id="@+id/etDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Direccion"
+                android:hint="@string/txt_dirección"
                 android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/txtNac"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
-                android:text="Fecha de Nacimiento:" />
+                android:text="@string/fechaNac" />
 
             <EditText
                 android:id="@+id/etFechaNac"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Fecha de Nacimiento"
-                android:inputType="date" />
+                android:hint="@string/txt_fechaNac"
+                android:inputType="date"
+                android:minHeight="48dp" />
 
             <Button
                 android:id="@+id/btnContinuar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="MasDatos"
-                android:text="Continuar" />
+                android:text="@string/button" />
 
         </LinearLayout>
     </ScrollView>
