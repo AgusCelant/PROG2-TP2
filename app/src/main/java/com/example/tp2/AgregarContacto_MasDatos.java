@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -21,6 +22,7 @@ public class AgregarContacto_MasDatos extends AppCompatActivity {
 
     private RadioButton rbPrimarioIncompleto, rbPrimarioCompleto, rbSecundarioIncompleto, rbSecundarioCompleto, rbOtros;
     private CheckBox chDeporte, chArte, chMusica, chTecnologia;
+    private Switch info;
     private ArrayList<String> contactos;
 
     @Override
@@ -32,6 +34,8 @@ public class AgregarContacto_MasDatos extends AppCompatActivity {
         rbPrimarioIncompleto = (RadioButton)findViewById(R.id.rbPrimarioIncompleto);
         rbSecundarioCompleto = (RadioButton)findViewById(R.id.rbSecundarioCompleto);
         rbSecundarioIncompleto = (RadioButton)findViewById(R.id.rbSecundarioIncompleto);
+        rbOtros = (RadioButton)findViewById(R.id.rbOtros);
+        info = (Switch)findViewById(R.id.swRecibirInfo) ;
 
         chDeporte = (CheckBox)findViewById(R.id.ckDeporte);
         chArte = (CheckBox)findViewById(R.id.chArte);
@@ -78,7 +82,7 @@ public class AgregarContacto_MasDatos extends AppCompatActivity {
 
     private void GuardarArchivo(){
         try {
-            OutputStreamWriter archivo = new OutputStreamWriter(openFileOutput("contactos.txt", Activity.MODE_APPEND));
+            OutputStreamWriter archivo = new OutputStreamWriter(openFileOutput("contactos.txt", Activity.MODE_PRIVATE));
             String nombre = getIntent().getStringExtra("nombre");
             String apellido = getIntent().getStringExtra("apellido");
             String telefono = getIntent().getStringExtra("telefono");
@@ -88,7 +92,7 @@ public class AgregarContacto_MasDatos extends AppCompatActivity {
             String direccion = getIntent().getStringExtra("direccion");
             String fecha_nacimiento = getIntent().getStringExtra("fecha_nacimiento");
 
-            String contacto = nombre+"|"+apellido+"|"+telefono+"|"+tipo_telefono+"|"+email+"|"+tipo_email+"|"+direccion+"|"+fecha_nacimiento;
+            String contacto = nombre+";"+apellido+";"+telefono+";"+tipo_telefono+";"+email+";"+tipo_email+";"+direccion+";"+fecha_nacimiento;
 
             String primarioInc = rbPrimarioIncompleto.isChecked() ? "true" : "false";
             String primarioComp = rbSecundarioIncompleto.isChecked() ? "true" : "false";
@@ -100,7 +104,7 @@ public class AgregarContacto_MasDatos extends AppCompatActivity {
             String musica = chMusica.isChecked() ? "true" : "false";
             String tecnologia = chTecnologia.isChecked() ? "true" : "false";
 
-            contacto = contacto+"|"+primarioInc+"|"+primarioComp+"|"+secundarioInc+"|"+secundarioComp+"|"+otros+"|"+deporte+"|"+arte+"|"+musica+"|"+tecnologia;
+            contacto = contacto+";"+primarioInc+";"+primarioComp+";"+secundarioInc+";"+secundarioComp+";"+otros+";"+deporte+";"+arte+";"+musica+";"+tecnologia;
             archivo.write(contacto+"\n");
             archivo.flush();
             archivo.close();

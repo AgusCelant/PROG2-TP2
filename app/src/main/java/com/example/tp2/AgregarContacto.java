@@ -31,7 +31,7 @@ public class AgregarContacto extends AppCompatActivity {
         etFechaNac = (EditText)findViewById(R.id.etFechaNac);
 
         spinner_tel = (Spinner) findViewById(R.id.spinner_tel);
-        spinner_email = (Spinner) findViewById(R.id.spinner_tel);
+        spinner_email = (Spinner) findViewById(R.id.spinner_email);
         String [] opciones = {"Casa", "Trabajo", "Móvil"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item_tp, opciones);
         ArrayAdapter<String> adapterEmail = new ArrayAdapter<>(this, R.layout.spinner_item_tp, opciones);

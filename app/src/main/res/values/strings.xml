@@ -29,5 +29,5 @@
     <string name="txt_recibir_info">¿DESEA RECIBIR INFORMACIÓN?</string>
     <string name="ck_recibir_info_si">SI</string>
     <string name="ck_recibir_info_no">NO</string>
-    <string name="btn_guardar_masdatos">GUARDAR</string>
+    <string name="btn_guardar">GUARDAR</string>
 </resources>

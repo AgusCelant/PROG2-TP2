@@ -10,11 +10,11 @@
         android:id="@+id/txtTitulo"
         android:layout_width="379dp"
         android:layout_height="46dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="FORMULARIO DE CONTACTO"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,10 +22,10 @@
         android:id="@+id/txtDescripcion"
         android:layout_width="392dp"
         android:layout_height="104dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="8dp"
         android:text="Este es un formulario de contacto destinado al registro de personas, sus datos personales e intereses"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
 
@@ -34,14 +34,13 @@
         android:layout_height="630dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
-        app:layout_constraintVertical_bias="0.923">
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <TextView
@@ -64,6 +63,7 @@
                 android:id="@+id/txtApellido"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/apellido" />
 
             <EditText
@@ -72,54 +72,78 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/txt_apellido"
-                android:hintTextColor="#757575"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575" />
 
             <TextView
                 android:id="@+id/txtTelefono"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/teléfono" />
 
-            <EditText
-                android:id="@+id/etTelefono"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/txt_teléfono"
-                android:inputType="phone"
-                android:minHeight="48dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/spinner_tel"
-                android:layout_width="136dp"
-                android:layout_height="48dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etTelefono"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/txt_teléfono"
+                        android:inputType="phone"
+                        android:minHeight="48dp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_tel"
+                        android:layout_width="191dp"
+                        android:layout_height="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/email" />
 
-            <EditText
-                android:id="@+id/etMail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/txt_email"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp" />
-
-            <Spinner
-                android:id="@+id/spinner_email"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp" />
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/txt_email"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/txtDireccion"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/dirección" />
 
             <EditText
@@ -128,12 +152,14 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/txt_dirección"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
 
             <TextView
                 android:id="@+id/txtNac"
                 android:layout_width="match_parent"
                 android:layout_height="33dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/fechaNac" />
 
             <EditText
