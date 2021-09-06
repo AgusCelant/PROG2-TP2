@@ -41,22 +41,66 @@ public class AgregarContacto extends AppCompatActivity {
 
     public void MasDatos(View view){
         Intent masDatos = new Intent(this, AgregarContacto_MasDatos.class);
-        masDatos.putExtra("nombre",etNombre.getText().toString());
-        masDatos.putExtra("apellido",etApellido.getText().toString());
-        masDatos.putExtra("telefono",etTelefono.getText().toString());
-        masDatos.putExtra("email",etMail.getText().toString());
-        masDatos.putExtra("direccion",etDireccion.getText().toString());
-        masDatos.putExtra("fecha_nacimiento",etFechaNac.getText().toString());
-        
+        boolean incompleto = false;
+        if (etNombre.length() != 0){
+            masDatos.putExtra("nombre",etNombre.getText().toString());
+        }else{
+            Toast.makeText(this,"Debe agregar un nombre",Toast.LENGTH_SHORT);
+            incompleto = true;
+        }
+
+        if(etApellido.length() != 0){
+            masDatos.putExtra("apellido",etApellido.getText().toString());
+        }else{
+            Toast.makeText(this,"Debe agregar un apellido",Toast.LENGTH_SHORT);
+            incompleto = true;
+        }
+
+        if(etTelefono.length() != 0){
+            masDatos.putExtra("telefono",etTelefono.getText().toString());
+        }else{
+            Toast.makeText(this,"Debe agregar un teléfono",Toast.LENGTH_SHORT);
+            incompleto = true;
+        }
+
+        if(etMail.length() != 0){
+            masDatos.putExtra("email",etMail.getText().toString());
+        }else{
+            Toast.makeText(this,"Debe agregar un e-mail",Toast.LENGTH_SHORT);
+            incompleto = true;
+        }
+
+        if(etDireccion.length() != 0){
+            masDatos.putExtra("direccion",etDireccion.getText().toString());
+        }else{
+            Toast.makeText(this,"Debe agregar un dirección",Toast.LENGTH_SHORT);
+            incompleto = true;
+        }
+
+        if(etFechaNac.length() != 0){
+            masDatos.putExtra("fecha_nacimiento",etFechaNac.getText().toString());
+        }else{
+            Toast.makeText(this,"Debe agregar una fecha de nacimiento",Toast.LENGTH_SHORT);
+            incompleto = true;
+        }
+
         String tel = spinner_tel.getSelectedItem().toString();
         if(!tel.isEmpty()){
             masDatos.putExtra("tipo_telefono",tel);
+        }else{
+            Toast.makeText(this,"Debe agregar un teléfono",Toast.LENGTH_SHORT);
+            incompleto = true;
         }
+
         String email = spinner_email.getSelectedItem().toString();
         if(!email.isEmpty()){
             masDatos.putExtra("tipo_email", email);
+        }else{
+            Toast.makeText(this,"Debe agregar un mail",Toast.LENGTH_SHORT);
+            incompleto = true;
         }
-        
-        startActivity(masDatos);
+        if (!incompleto)
+            startActivity(masDatos);
     }
+
 }

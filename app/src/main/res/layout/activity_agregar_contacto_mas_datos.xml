@@ -6,168 +6,153 @@
     android:layout_height="match_parent"
     tools:context=".AgregarContacto_MasDatos">
 
-    <CheckBox
-        android:id="@+id/chTecnologia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/ck_tecnologia"
+    <ScrollView
+        android:layout_width="391dp"
+        android:layout_height="576dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chMusica" />
-
-    <CheckBox
-        android:id="@+id/chArte"
-        android:layout_width="59dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/ck_arte"
-        app:layout_constraintEnd_toStartOf="@+id/chTecnologia"
-        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ckDeporte" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="363dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="16dp"
-        android:text="FORMULARIO DE CONTACTO"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.354"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtDescripcion"
-        android:layout_width="372dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="12dp"
-        android:text="Este es un formulario de contacto destinado al registro de personas, sus datos personales e intereses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
-    <TextView
-        android:id="@+id/txtEstudios"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="NIVEL DE ESTUDIOS ALCANZADOS"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion" />
-
-    <TextView
-        android:id="@+id/txtintereses"
-        android:layout_width="82dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/txt_intereses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <CheckBox
-        android:id="@+id/ckDeporte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/ck_deporte"
-        app:layout_constraintEnd_toStartOf="@+id/chMusica"
-        app:layout_constraintHorizontal_bias="0.238"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtintereses" />
-
-    <CheckBox
-        android:id="@+id/chMusica"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="104dp"
-        android:text="@string/ck_musica"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtintereses" />
-
-    <TextView
-        android:id="@+id/txtInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/txt_recibir_info"
-        app:layout_constraintEnd_toStartOf="@+id/swRecibirInfo"
-        app:layout_constraintHorizontal_bias="0.279"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chArte" />
-
-    <Switch
-        android:id="@+id/swRecibirInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="92dp"
-        android:textOff="@string/ck_recibir_info_no"
-        android:textOn="@string/ck_recibir_info_si"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chTecnologia" />
-
-    <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Guardar"
-        android:text="@string/btn_guardar"
-        tools:layout_editor_absoluteX="264dp"
-        tools:layout_editor_absoluteY="435dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="364dp"
-        android:layout_height="258dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEstudios">
-
-        <RadioButton
-            android:id="@+id/rbPrimarioIncompleto"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="@string/rb_primario_incompleto" />
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/rbPrimarioCompleto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/rb_primario_completo" />
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="363dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:text="FORMULARIO DE CONTACTO"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <RadioButton
-            android:id="@+id/rbSecundarioIncompleto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/rb_secundario_incompleto" />
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="372dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="12dp"
+                android:text="Este es un formulario de contacto destinado al registro de personas, sus datos personales e intereses" />
 
-        <RadioButton
-            android:id="@+id/rbSecundarioCompleto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/rb_secundario_completo" />
+            <TextView
+                android:id="@+id/txtEstudios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="NIVEL DE ESTUDIOS ALCANZADOS" />
 
-        <RadioButton
-            android:id="@+id/rbOtros"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/rb_otros" />
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="364dp"
+                android:layout_height="258dp"
+                android:layout_marginTop="12dp">
 
-    </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rbPrimarioIncompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/rb_primario_incompleto" />
+
+                <RadioButton
+                    android:id="@+id/rbPrimarioCompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/rb_primario_completo" />
+
+                <RadioButton
+                    android:id="@+id/rbSecundarioCompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/rb_secundario_completo" />
+
+                <RadioButton
+                    android:id="@+id/rbSecundarioIncompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/rb_secundario_incompleto" />
+
+                <RadioButton
+                    android:id="@+id/rbOtros"
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:minHeight="48dp"
+                    android:text="@string/rb_otros" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtintereses"
+                android:layout_width="82dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/txt_intereses" />
+
+            <CheckBox
+                android:id="@+id/chTecnologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="80dp"
+                android:text="@string/ck_tecnologia" />
+
+            <CheckBox
+                android:id="@+id/ckDeporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/ck_deporte" />
+
+            <CheckBox
+                android:id="@+id/chMusica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="104dp"
+                android:text="@string/ck_musica" />
+
+            <CheckBox
+                android:id="@+id/chArte"
+                android:layout_width="59dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/ck_arte" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/txt_recibir_info" />
+
+                <Switch
+                    android:id="@+id/swRecibirInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="92dp"
+                    android:textOff="@string/ck_recibir_info_no"
+                    android:textOn="@string/ck_recibir_info_si" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="Guardar"
+                android:text="@string/btn_guardar" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

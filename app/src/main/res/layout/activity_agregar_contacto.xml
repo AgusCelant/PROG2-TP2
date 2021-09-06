@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AgregarContacto">
 
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="379dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="16dp"
-        android:text="FORMULARIO DE CONTACTO"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtDescripcion"
-        android:layout_width="392dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="8dp"
-        android:text="Este es un formulario de contacto destinado al registro de personas, sus datos personales e intereses"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
-
     <ScrollView
         android:layout_width="399dp"
         android:layout_height="630dp"
@@ -42,6 +19,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:layout_width="379dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="16dp"
+                android:text="FORMULARIO DE CONTACTO"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="392dp"
+                android:layout_height="104dp"
+                android:layout_marginTop="12dp"
+                android:text="Este es un formulario de contacto destinado al registro de personas, sus datos personales e intereses"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/txtNombre"
