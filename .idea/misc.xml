@@ -8,6 +8,7 @@
         <entry key="..\:/Users/agust/AndroidStudioProjects/TP2/app/src/main/res/layout/activity_listar_contactos.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/agust/AndroidStudioProjects/TP2/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/agust/AndroidStudioProjects/TP2/app/src/main/res/menu/menu_principal.xml" value="0.20416666666666666" />
+        <entry key="..\:/android_projects/PROG2-TP2/app/src/main/res/layout/activity_agregar_contacto_mas_datos.xml" value="0.5541666666666667" />
       </map>
     </option>
   </component>
@@ -16,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5541666666666667" />
+      </ProjectState>
+    </option>
   </component>
 </project>

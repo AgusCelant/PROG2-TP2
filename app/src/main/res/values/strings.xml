@@ -15,4 +15,19 @@
     <string name="fechaNac">Fecha de nacimiento:</string>
 
     <string name="button">Continuar</string>
+
+    <string name="rb_primario_incompleto">Primario Incompleto</string>
+    <string name="rb_primario_completo">Primario Completo</string>
+    <string name="rb_secundario_incompleto">Secundario Incompleto</string>
+    <string name="rb_secundario_completo">Secundario Completo</string>
+    <string name="rb_otros">Otros</string>
+    <string name="txt_intereses">INTERESES</string>
+    <string name="ck_deporte">Deporte</string>
+    <string name="ck_arte">Arte</string>
+    <string name="ck_musica">Música</string>
+    <string name="ck_tecnologia">Tecnología</string>
+    <string name="txt_recibir_info">¿DESEA RECIBIR INFORMACIÓN?</string>
+    <string name="ck_recibir_info_si">SI</string>
+    <string name="ck_recibir_info_no">NO</string>
+    <string name="btn_guardar_masdatos">GUARDAR</string>
 </resources>
